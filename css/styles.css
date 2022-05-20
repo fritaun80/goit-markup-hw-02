@@ -3,6 +3,12 @@
   --subcolor: #757575;
   --accent-color: #2196f3;
   --bg-color: #ffffff;
+  --bgc-hero: #2f303a;
+  --bgc-btn-hover: #188ce8;
+  --logo-studio: #000000;
+  --bgc-team: #f5f4fa;
+  --bgc-footer: #2f303a;
+  --bgc-filter-btn: #f5f4fa;
 }
 
 /* ======= Body ======= */
@@ -15,8 +21,8 @@ body {
 }
 
 /* ======= Header ======= */
-.header-logo {
-  font-family: "Raleway";
+.logo {
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
@@ -25,7 +31,7 @@ body {
 }
 
 .studio {
-  color: #000000;
+  color: var(--logo-studio);
 }
 
 .header-list,
@@ -34,17 +40,22 @@ body {
 }
 
 .header-link {
+  font-weight: 500;
+  font-size: 14px;
   text-decoration: none;
   color: var(--main-color);
 }
 
 .header-link:hover,
-.header-link:focus {
+.header-link:focus,
+.header-link-current {
+  font-weight: 500;
+  font-size: 14px;
   color: var(--accent-color);
 }
 
 .header-link-current {
-  color: var(--accent-color);
+  text-decoration: none;
 }
 
 .header-email,
@@ -62,12 +73,11 @@ body {
 
 /* ======= HERO ======= */
 .hero {
-  background: #2f303a;
+  background: var(--bgc-hero);
 }
 
 .hero-title {
   color: var(--bg-color);
-  font-family: inherit;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -83,9 +93,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -94,41 +101,34 @@ body {
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #188ce8;
+  background-color: var(--bgc-btn-hover);
 }
 
 /* ======= FEATURES ======= */
 
 .features-list-title {
-  font-family: inherit;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
-  letter-spacing: inherit;
   text-transform: uppercase;
 
   color: var(--main-color);
 }
 
 .features-text {
-  font-family: inherit;
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: inherit;
   color: var(--subcolor);
 }
 
 /* ======= ABOUT ======= */
 
 .about-title {
-  font-family: inherit;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
-  letter-spacing: inherit;
-
   color: var(--main-color);
 }
 
@@ -139,17 +139,14 @@ body {
 /* ======= TEAM ======= */
 
 .team {
-  background: #f5f4fa;
+  background: var(--bgc-team);
 }
 
 .team-title {
-  font-family: inherit;
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: calc(42 / 36);
   text-align: center;
-  letter-spacing: inherit;
-
   color: var(--main-color);
 }
 
@@ -167,33 +164,25 @@ body {
 }
 
 .team-name {
-  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
-  letter-spacing: inherit;
   color: var(--main-color);
 }
 
 .team-position {
-  font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
-  letter-spacing: inherit;
   color: var(--subcolor);
 }
 
 /* ======= Footer ======= */
 
 .footer {
-  width: 1600px;
-  height: 252px;
-  left: 0px;
-  top: 2097px;
-  background: #2f303a;
+  background: var(--bgc-footer);
 }
 
 .footer-logo {
@@ -220,7 +209,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
+  letter-spacing: inherit;
   color: var(--bg-color);
 }
 
@@ -257,21 +246,22 @@ body {
   letter-spacing: inherit;
   color: var(--main-color);
   cursor: pointer;
-  background: #f5f4fa;
+  background: var(--bgc-filter-btn);
 }
 
 .filter-button:hover,
 .filter-button:focus {
-  color: var(--accent-color);
+  color: var(--bg-color);
+  background-color: var(--accent-color);
 }
 
-.filter-button-curent {
+.filter-button-current {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: inherit;
   cursor: pointer;
 
   color: var(--bg-color);
@@ -288,7 +278,6 @@ body {
 }
 
 .works-title {
-  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
@@ -297,11 +286,9 @@ body {
 }
 
 .works-text {
-  font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(30 / 16);
-  letter-spacing: 0.03em;
   color: var(--subcolor);
 }
 
